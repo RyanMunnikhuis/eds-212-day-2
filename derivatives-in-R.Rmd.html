@@ -209,6 +209,19 @@ gf_gt</code></pre>
 
 eval(expr = gf_gt)</code></pre>
 <pre><code>## [1] -4</code></pre>
+<p>#Higher order derivatives</p>
+<pre class="r"><code>g_z = expression(4.6-1.9*z^3)
+
+gf_dz = D(exp = g_z, &quot;z&quot;)
+
+gf_dz</code></pre>
+<pre><code>## -(1.9 * (3 * z^2))</code></pre>
+<pre class="r"><code>g2_z2 = expression(-1.9*(3*z^2))
+
+g2f_dz2 = D(exp = g2_z2, &quot;z&quot;)
+
+g2f_dz2</code></pre>
+<pre><code>## -(1.9 * (3 * (2 * z)))</code></pre>
 </div>
 
 

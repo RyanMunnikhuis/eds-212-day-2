@@ -56,4 +56,19 @@ t = 0
 eval(expr = gf_gt)
 
 ```
+#Higher order derivatives 
+```{r}
+g_z = expression(4.6-1.9*z^3)
+
+gf_dz = D(exp = g_z, "z")
+
+gf_dz
+
+g2_z2 = expression(-1.9*(3*z^2))
+
+g2f_dz2 = D(exp = g2_z2, "z")
+
+g2f_dz2
+
+```
 
