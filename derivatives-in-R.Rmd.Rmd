@@ -71,4 +71,42 @@ g2f_dz2 = D(exp = g2_z2, "z")
 g2f_dz2
 
 ```
+```{r}
+
+#Partial derivatives 
+
+f_x_y_Z = expression(2*x^2*y-3*x+1+4*z^4*x)
+
+df_dx = D(exp = f_x_y_Z, "x")
+
+df_dx
+
+df_dy = D(exp = f_x_y_Z, "y")
+
+df_dy
+
+df_dz = D(exp = f_x_y_Z, "z")
+
+df_dz
+```
+```{r}
+f_x = function(x) {
+  2.4 * exp(-.05 * x) * sin(x)
+}
+  
+```
+
+```{r}
+
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + geom_point(aes(color = species))
+
+
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) + geom_jitter() + 
+  labs (x = "Species", 
+        y = "Flipper length (mm)",
+        title = "Penguin Species versus Flipper Length")
+```
 
